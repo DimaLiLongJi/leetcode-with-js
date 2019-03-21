@@ -33,6 +33,7 @@ var twoSum = function(nums, target) {
     const result = [];
     let length = nums.length;
     for (let i = length - 1; i > -1; i --) {
+      if (result.length === 2) break;
       const rest = target - nums[i];
       for (let x = i - 1; x > -1; x --) {
         if (nums[x] === rest && result.length === 0) {
